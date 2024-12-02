@@ -17,12 +17,30 @@
     </nav>
   </header>
   <main>
-    <h1>Card Collection</h1>
-    <div id="gallery" class="card-gallery">
-      <!-- Cards will dynamically appear here -->
+    <div class="sidebar">
+      <div class="search-container">
+        <input type="text" id="searchBar" placeholder="Search for a card..." />
+      </div>
+      <div class="filters-container">
+        <div class="filter">
+          <label for="sourceFilter">Source:</label>
+          <input type="checkbox" id="sourceOrder" /> Order
+          <input type="checkbox" id="sourceNature" /> Nature
+          <input type="checkbox" id="sourceFeral" /> Feral
+        </div>
+      </div>
     </div>
+
+    <div class="content">
+      <h1>Card Collection</h1>
+      <div id="gallery" class="card-gallery">
+        <!-- Cards will dynamically appear here -->
+      </div>
+    </div>
+
     <div id="popup" class="popup"></div> <!-- Hidden pop-up window -->
   </main>
+
   <script src="../scripts/collection.js" defer></script>
   <footer>
     <p>&copy; 2024 Connor Hopkins. All Rights Reserved.</p>
