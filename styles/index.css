@@ -1,3 +1,6 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 /* General Reset */
 body, html, ul, li, a {
     margin: 0;
@@ -37,8 +40,7 @@ body {
   justify-content: center;
   align-items: center;
   height: auto;
-  font-family: Arial, sans-serif;
-  background-color: #615756;
+  background-color: black;
   color: white;
 }
 
@@ -50,10 +52,9 @@ main {
 
 /* Hero Section */
 .hero {
-  background-color: 61#5756;
-  color: green;
+  color: #228B22;
   padding: 50px 0;
-  -webkit-text-stroke: 1px black; /* Outline color and thickness */
+  font-family: "Cinzel Decorative", Arial, sans-serif;
 }
 
 .hero-text {
@@ -112,6 +113,7 @@ button:hover {
 .features h2 {
   font-size: 2.5rem;
   margin-bottom: 30px;
+  font-family: "Cinzel Decorative", Arial, sans-serif;
 }
 
 /* Panel Layout */
@@ -124,7 +126,7 @@ button:hover {
 }
 
 .panel {
-  background-color: #333;
+  background-color: #013220;
   color: white;
   padding: 20px;
   border-radius: 8px;
@@ -146,7 +148,7 @@ button:hover {
 /* Hover effect on panels */
 .panel:hover {
   transform: scale(1.05); /* Slightly enlarges the panel */
-  background-color: #444; /* Makes the background brighter */
+  background-color: #228B22; /* Makes the background brighter */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Enhanced shadow effect */
 }
 

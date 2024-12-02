@@ -1,0 +1,121 @@
+/* General Reset */
+body, html, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Header */
+  header {
+    background-color: #333;
+    padding: 10px 20px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+  }
+  
+  nav a:hover {
+    color: #007bff;
+  }
+  
+  /* Commanders Section */
+  .commanders-section {
+    padding: 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    color: white;
+    height: 100vh;
+  }
+  
+  /* Commander Images */
+.commander-image {
+    width: 300px; /* Standardized width */
+    height: 300px; /* Standardized height */
+    object-fit: cover; /* Ensures images are cropped to fit dimensions */
+    border-radius: 10px; /* Adds rounded corners */
+    margin-bottom: 20px; /* Adds spacing below the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adds a shadow for depth */
+  }
+  
+
+  /* Tabs */
+  .tabs-container {
+    margin: 20px 0;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 10px;
+  }
+  
+  .tabs li {
+    padding: 10px 20px;
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .tabs li:hover {
+    background-color: #007bff;
+  }
+  
+  .tabs li.active {
+    background-color: #007bff;
+  }
+  
+/* Tab Content Layout */
+.tab-content {
+    display: flex; /* Enables two-column layout */
+    align-items: center; /* Vertically aligns content */
+    justify-content: space-between; /* Creates space between image and text */
+    gap: 20px; /* Adds spacing between the two columns */
+    margin-top: 20px;
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Commander Information (Left Column) */
+  .tab-content div.text-content {
+    flex: 1; /* Takes up available space */
+    text-align: left; /* Aligns text to the left */
+  }
+  
+  /* Commander Image (Right Column) */
+  .commander-image {
+    flex-shrink: 0; /* Prevents the image from shrinking */
+    width: 300px; /* Standardized width */
+    height: 300px; /* Standardized height */
+    object-fit: cover; /* Ensures the image fits the dimensions */
+    border-radius: 10px; /* Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adds a shadow for depth */
+  }
+  
+  
+  .tab-content h2 {
+    font-size: 2rem;
+  }
+  
+  .tab-content p {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  
