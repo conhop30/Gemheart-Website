@@ -1,26 +1,33 @@
 // Commanders data template
 const commanders = [
     {
-      name: "Commander One",
-      description: "A versatile commander focused on control and adaptability.",
-      playstyle: "Control",
-      traits: "Strategic, Adaptable",
-      image: "../images/commander1.jpg",
+        name: "Commander One",
+        description: "A versatile commander focused on control and adaptability.",
+        playstyle: "Control",
+        traits: "Strategic, Adaptable",
+        image: "../images/commander1.jpg",
     },
     {
-      name: "Commander Two",
-      description: "An aggressive commander excelling in quick and decisive actions.",
-      playstyle: "Aggression",
-      traits: "Bold, Fearless",
-      image: "../images/commander2.PNG",
+        name: "Commander Two",
+        description: "An aggressive commander excelling in quick and decisive actions.",
+        playstyle: "Aggression",
+        traits: "Bold, Fearless",
+        image: "../images/commander2.PNG",
     },
     {
-      name: "Commander Three",
-      description: "A defensive commander specializing in holding the line.",
-      playstyle: "Defense",
-      traits: "Resilient, Protective",
-      image: "../images/commander3.jpg",
+        name: "Commander Three",
+        description: "A defensive commander specializing in holding the line.",
+        playstyle: "Defense",
+        traits: "Resilient, Protective",
+        image: "../images/commander3.jpg",
     },
+    {
+        name: "Commander Four",
+        description: "A voracious commander who consumes everything.",
+        playstyle: "Aggression",
+        traits: "Constant, Corrosive",
+        image: "../images/commander4.jpg",
+        },
   ];
   
   // Populate tabs and content
