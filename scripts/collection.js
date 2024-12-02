@@ -27,7 +27,11 @@ const renderGallery = (filteredCards) => {
     `;
     gallery.appendChild(cardElement);
   });
+
+  // Reapply hover effects after rendering new cards
+  setupHoverEffects();
 };
+
 
 // Pop-up functionality
 const setupHoverEffects = () => {
@@ -39,29 +43,60 @@ const setupHoverEffects = () => {
       const title = card.getAttribute("data-title");
       const description = card.getAttribute("data-description");
       const image = card.getAttribute("data-image");
-      const source = card.getAttribute("data-source");
 
       popup.innerHTML = `
         <img src="${image}" alt="${title}">
         <h3>${title}</h3>
         <p>${description}</p>
-        <p>${source}</p>
       `;
-      popup.style.top = `${e.clientY + 10}px`;
-      popup.style.left = `${e.clientX + 10}px`;
-      popup.classList.add("visible");
+      popup.style.display = "block"; // Ensure it's visible to calculate dimensions
+      adjustPopupPosition(e.clientX, e.clientY, popup);
     });
 
     card.addEventListener("mousemove", (e) => {
-      popup.style.top = `${e.clientY + 10}px`;
-      popup.style.left = `${e.clientX + 10}px`;
+      adjustPopupPosition(e.clientX, e.clientY, popup);
     });
 
     card.addEventListener("mouseleave", () => {
-      popup.classList.remove("visible");
+      popup.style.display = "none";
     });
   });
+
+  // Function to adjust popup position based on screen edges
+  const adjustPopupPosition = (mouseX, mouseY, popup) => {
+    const padding = 10; // Padding to avoid popup being right at the edge
+    const popupRect = popup.getBoundingClientRect();
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+
+    let top = mouseY + padding;
+    let left = mouseX + padding;
+
+    // Adjust if the popup goes beyond the right edge
+    if (left + popupRect.width > viewportWidth) {
+      left = viewportWidth - popupRect.width - padding;
+    }
+
+    // Adjust if the popup goes beyond the bottom edge
+    if (top + popupRect.height > viewportHeight) {
+      top = viewportHeight - popupRect.height - padding;
+    }
+
+    // Adjust if the popup goes beyond the left edge
+    if (left < padding) {
+      left = padding;
+    }
+
+    // Adjust if the popup goes beyond the top edge
+    if (top < padding) {
+      top = padding;
+    }
+
+    popup.style.top = `${top}px`;
+    popup.style.left = `${left}px`;
+  };
 };
+
 
 // Search functionality
 const setupSearch = () => {
