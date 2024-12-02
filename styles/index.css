@@ -6,31 +6,31 @@ body, html, ul, li, a {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  /* Header */
-  header {
+}
+
+/* Header */
+header {
     background-color: #333;
     padding: 10px 20px;
-  }
+}
   
-  nav ul {
+nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
     justify-content: center;
-  }
+}
   
-  nav a {
+nav a {
     text-decoration: none;
     color: white;
     font-size: 1.2rem;
     text-transform: uppercase;
-  }
+}
   
-  nav a:hover {
+nav a:hover {
     color: #007bff;
-  }
+}
 
 /* Main Section */
 body {
@@ -49,11 +49,35 @@ main {
   text-align: center;
 }
 
-/* Hero Section */
+/* Hero Section with Background */
 .hero {
   color: #228B22;
   padding: 50px 0;
   font-family: "Cinzel Decorative", Arial, sans-serif;
+  position: relative;
+  text-align: center;
+  overflow: hidden; /* Ensures content stays within the section */
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../images/hero-banner.PNG') no-repeat center center/cover; /* Add your image path */
+  opacity: 0.3; /* Adjust transparency */
+  z-index: -1; /* Places the image behind the content */
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-text {
@@ -70,7 +94,7 @@ main {
 }
 
 .hero-text h1 {
-  font-size: clamp(4rem, 10vw, 8rem);  /* Responsive text size */
+  font-size: clamp(4rem, 10vw, 8rem);
   text-align: center;
   margin: 0;
 }
@@ -80,6 +104,7 @@ main {
   font-size: 1.2rem;
   color: white;
   margin-top: 20px;
+  font-family: Arial, sans-serif;
 }
 
 /* Play Now Button */
@@ -150,7 +175,6 @@ button:hover {
   background-color: #228B22; /* Makes the background brighter */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Enhanced shadow effect */
 }
-
 
 /* Fade-in Effect */
 .fade-in {

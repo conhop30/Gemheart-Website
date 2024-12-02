@@ -5,6 +5,7 @@ const commanders = [
         description: "A versatile commander focused on control and adaptability.",
         playstyle: "Control",
         traits: "Strategic, Adaptable",
+        source: "Feral",
         image: "../images/commander1.jpg",
     },
     {
@@ -12,6 +13,7 @@ const commanders = [
         description: "An aggressive commander excelling in quick and decisive actions.",
         playstyle: "Aggression",
         traits: "Bold, Fearless",
+        source: "Order",
         image: "../images/commander2.PNG",
     },
     {
@@ -19,6 +21,7 @@ const commanders = [
         description: "A defensive commander specializing in holding the line.",
         playstyle: "Defense",
         traits: "Resilient, Protective",
+        source: "Nature",
         image: "../images/commander3.jpg",
     },
     {
@@ -26,8 +29,9 @@ const commanders = [
         description: "A voracious commander who consumes everything.",
         playstyle: "Aggression",
         traits: "Constant, Corrosive",
+        source: "Feral",
         image: "../images/commander4.jpg",
-        },
+    },
   ];
   
   // Populate tabs and content
@@ -44,6 +48,7 @@ const updateContent = (index) => {
         <p><strong>Description:</strong> ${commander.description}</p>
         <p><strong>Playstyle:</strong> ${commander.playstyle}</p>
         <p><strong>Traits:</strong> ${commander.traits}</p>
+        <p><strong>Source:</strong> ${commander.source}</p>
       </div>
       <img src="${commander.image}" alt="${commander.name}" class="commander-image">
     `;
