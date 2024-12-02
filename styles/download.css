@@ -1,0 +1,85 @@
+/* General Reset */
+body, html, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Ensure header stays at the top */
+  body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+  }
+  
+  /* Header */
+  header {
+    background-color: #333;
+    padding: 10px 20px;
+    position: fixed; /* Keep header at the top */
+    width: 100%; /* Ensure it spans the full width */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Make sure it stays on top of other content */
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center; /* Center the nav items */
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    text-transform: uppercase; /* Make links uppercase */
+    font-weight: bold; /* Make text bold */
+  }
+  
+  nav a:hover {
+    color: #007bff; /* Add hover effect to links */
+  }
+  
+  /* Main Section */
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px; /* Adjust for fixed header height */
+    text-align: center;
+    flex-grow: 1; /* Allow content to fill remaining space */
+  }
+  
+  .center-content {
+    text-align: center;
+  }
+  
+  .center-content h1 {
+    font-size: clamp(2rem, 8vw, 5rem); /* Responsive text size */
+    color: green; /* Matches the hero text style */
+  }
+  
+  /* Button Styling */
+  .download-button {
+    background-color: #007bff; /* Blue button */
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    text-transform: uppercase; /* Make text uppercase */
+  }
+  
+  .download-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+  
