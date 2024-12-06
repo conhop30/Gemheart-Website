@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Overview</title>
+  <link rel="stylesheet" href="../styles/overview.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../htmls/overview.html">Overview</a></li>
+        <li><a href="../htmls/collection.html">Collection</a></li>
+        <li><a href="../htmls/commanders.html">Commanders</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <!-- Table of Contents -->
+    <div class="toc-container">
+      <h2>Table of Contents</h2>
+      <ul>
+        <li><a href="#cards">Cards</a></li>
+        <ul>
+          <li><a href="#play-speeds">Play Speeds</a></li>
+          <li><a href="#card-types">Card Types</a></li>
+        </ul>
+        <li><a href="#board">Board</a></li>
+        <ul>
+          <li><a href="#queue-tracker">Queue Tracker</a></li>
+          <li><a href="#fog-of-war">Fog of War</a></li>
+        </ul>
+        <li><a href="#economy">Economy</a></li>
+        <ul>
+          <li><a href="#attack">Attack</a></li>
+          <li><a href="#defend">Defend</a></li>
+          <li><a href="#resource-growth">Rate of Resource Growth</a></li>
+        </ul>
+      </ul>
+    </div>
+
+    <!-- Content Area -->
+    <div class="content">
+      <section id="cards">
+        <h1>Cards</h1>
+        <div class="section-content">
+          <div class="text">
+            <h2 id="play-speeds">Play Speeds</h2>
+            <p>There are three play speeds that each card could have: <strong>Action</strong>, <strong>Queue</strong>, and <strong>Instant</strong>. They will impact how many cards you can play on a given turn.</p>
+            
+            <h3 class="icon-header">
+              Action
+              <img src="../images/speed-symbol-unit.jpg" alt="Action Icon" class="icon">
+            </h3>
+            <p>Once a card with an <strong>Action</strong> speed is played, that player's turn will automatically end.</p>
+            
+            <h3 class="icon-header">
+              Queue
+              <img src="../images/speed-symbol-queue.jpg" alt="Queue Icon" class="icon">
+            </h3>
+            <p>Once a card with a <strong>Queue</strong> speed is played, that player can continue playing cards, but that card's effect will not activate until the amount of turns has passed equal to the Queue value on the card. Essentially, the queue value acts as a sort of countdown.</p>
+            
+            <h3 class="icon-header">
+              Instant
+              <img src="../images/speed-symbol-instant.jpg" alt="Instant Icon" class="icon">
+            </h3>
+            <p>Once a card with an <strong>Instant</strong> speed is played, that card's effect will activate immediately and not end that player's turn.</p>
+            
+            <h2 id="card-types">Card Types</h2>
+            <p>There are three types of cards: <strong>Unit</strong>, <strong>Spell</strong>, and <strong>Structure</strong>.</p>
+            <h3>Unit</h3>
+            <p>These cards remain on the board and have <strong>Power</strong> and <strong>Health</strong>. Typically, they will remain on the board until their <strong>Health</strong> reaches zero.</p>
+            <h3>Spell</h3>
+            <p>These cards don't remain on the board. Once they resolve their effect, they will be removed.</p>
+            <h3>Structure</h3>
+            <p>These cards remain on the board and only have <strong>Health</strong>. They remain on the board until their <strong>Health</strong> reaches zero.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="board">
+        <h1>Board</h1>
+        <div class="section-content">
+          <div class="text">
+            <h2 id="queue-tracker">Queue Tracker</h2>
+            <p>Once a Queue speed card is played, how do you keep track of when it will activate? Hovering over a player's deck will show the <strong>Queue Tracker</strong>, which will show which queued cards are still waiting to activate, along with how many turns until they actually do activate.</p>
+
+            <h2 id="fog-of-war">Fog of War</h2>
+            <p>A layer of <strong>Fog of War</strong> conceals the opponent's board and hand by default. In order to dispel it, the opponent can put a card closer to them in the battlefield or by a card's effect.</p>
+          </div>
+          <img src="../images/board-image.jpg" alt="Board">
+        </div>
+      </section>
+
+      <section id="economy">
+        <h1>Economy</h1>
+        <div class="section-content">
+          <div class="text">
+            <h2 id="attack">Attack and Defend</h2>
+            <p>No resources are safe. To get the momentum edge on the opponent, a player can decide to attack their resources instead of their life. Of course, all players can do this, so make sure to defend your own, lest you fall behind and can't stop the oncoming pressure.</p>
+
+            <h2 id="resource-growth">Rate of Resource Growth</h2>
+            <p>Gain resources based on turns, not on rounds or attacks. Make sure to look out for how else you can manipulate your resources to gain more than just the passive income rate.</p>
+          </div>
+          <img src="../images/economy-image.jpg" alt="Economy">
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Connor Hopkins. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

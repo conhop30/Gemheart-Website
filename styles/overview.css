@@ -1,0 +1,151 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+/* General Reset */
+body, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Adjust for Section Headers (e.g., Cards, Board, Economy) */
+h1 {
+  font-size: 2.4rem; /* Large header size */
+  font-family: "Cinzel Decorative", Arial, sans-serif;
+  font-weight: bold;
+  color: #ecf0f1; /* Bright white for contrast */
+  margin-bottom: 20px;
+  border-bottom: 2px solid #7f8c8d; /* Underline for emphasis */
+  padding-bottom: 10px; /* Add padding to separate header from content */
+}
+
+/* Adjust for Subsection Headers */
+h2 {
+  font-size: 2rem;
+  font-family: "Cinzel Decorative", Arial, sans-serif;
+  font-weight: bold;
+  color: #1abc9c; /* Aqua green for distinctiveness */
+  margin-bottom: 15px;
+  padding-top: 20px; /* Add spacing above subsections for separation */
+}
+
+/* Adjust for Subsubsection Headers */
+h3 {
+  font-size: 1.6rem;
+  font-family: "Poppins", Arial, sans-serif;
+  font-weight: bold;
+  color: #f1c40f; /* Golden color for prominence */
+  margin-top: 20px; /* Space before the header */
+  margin-bottom: 10px; /* Space after the header */
+}
+
+/* Paragraph Styling */
+p {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6; /* Add better line spacing for readability */
+  margin-bottom: 15px; /* Space between paragraphs */
+}
+
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1c1c1e; /* Dark background */
+  color: #eaeaea; /* Light text */
+}
+
+/* Header Navigation */
+header nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  background-color: #333;
+  padding: 10px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Container */
+.container {
+  display: flex;
+  padding: 20px;
+}
+
+/* Table of Contents */
+.toc-container {
+  position: sticky; /* Enables stickiness */
+  top: 20px; /* Distance from the top of the viewport */
+  max-height: calc(100vh - 40px); /* Ensures it doesn’t overflow the viewport */
+  overflow-y: auto; /* Adds scrolling if content exceeds available space */
+  flex: 1;
+  padding: 15px;
+  background-color: #292929;
+  border-radius: 8px;
+  margin-right: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
+}
+
+.toc-container h2 {
+  margin-bottom: 15px;
+  font-family: "Cinzel Decorative", Arial, sans-serif;
+  font-size: 1.8rem; /* Distinctive size */
+  font-weight: bold;
+  color: #ecf0f1;
+  border-bottom: 2px solid #7f8c8d; /* Underline for emphasis */
+  padding-bottom: 10px;
+}
+
+.toc-container ul {
+  list-style: none;
+  padding-left: 10px;
+}
+
+.toc-container ul li {
+  margin-bottom: 10px;
+}
+
+.toc-container ul li a {
+  color: #64b5f6; /* Light blue links */
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.toc-container ul li a:hover {
+  text-decoration: underline; /* Visual cue for interaction */
+  color: #1abc9c; /* Aqua green hover effect */
+}
+
+/* Content */
+.content {
+  flex: 3;
+}
+
+/* Section Layout */
+.section-content {
+  margin-bottom: 40px;
+}
+
+/* Subheader with Inline Icons */
+.icon-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px; /* Space between text and icon */
+  font-size: 1.6rem; /* Larger header size */
+  font-weight: bold; /* Make the text bold */
+  color: #f1c40f; /* Golden color for prominence */
+}
+
+.icon-header img.icon {
+  width: 28px; /* Slightly larger icon */
+  height: 28px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+/* Adjusting for Better Flow */
+.icon-header + p {
+  margin-top: 10px; /* Add space between icon-header and the first paragraph */
+}
