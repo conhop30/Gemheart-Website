@@ -68,6 +68,23 @@ header nav ul li a {
   text-decoration: none;
 }
 
+#keyword-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.keyword-item {
+  text-align: center;
+}
+
+.keyword-item img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover; /* This will ensure the image covers the given dimensions without distortion */
+  border-radius: 8px; /* Optional: Add some rounded corners */
+}
+
 /* Container */
 .container {
   display: flex;
@@ -128,6 +145,20 @@ header nav ul li a {
   margin-bottom: 40px;
 }
 
+/* Board Section Image Styling */
+.section-content .image-container {
+  text-align: center; /* Center the image */
+  margin-top: 20px; /* Space between text and image */
+}
+
+.section-content .image-container img {
+  max-width: 100%; /* Ensure the image does not overflow the container */
+  height: auto; /* Maintain the aspect ratio */
+  border-radius: 8px; /* Rounded corners for the image */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+}
+
+
 /* Subheader with Inline Icons */
 .icon-header {
   display: inline-flex;
@@ -149,3 +180,16 @@ header nav ul li a {
 .icon-header + p {
   margin-top: 10px; /* Add space between icon-header and the first paragraph */
 }
+
+#popup {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8); /* Back to semi-transparent black */
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Ensure this is high enough */
+  display: none; /* Hidden by default */
+}
+
+
